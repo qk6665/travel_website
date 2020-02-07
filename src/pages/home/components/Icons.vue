@@ -88,13 +88,14 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  @import "~@/assets/styles/varibles.styl"
+  @import "~@/assets/styles/mixins.styl"
   .icons
     overflow hidden
     height 0
     padding-bottom 50%
+    margin-top .1rem
     .icon
-      @import "~@/assets/styles/varibles.styl"
-      @import "~@/assets/styles/mixins.styl"
       position relative
       overflow hidden
       float left
