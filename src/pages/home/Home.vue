@@ -1,10 +1,10 @@
 <template>
   <div>
-    <HomeHerder :city="city"></HomeHerder>
-    <HomeSwiper :list="swiperList"></HomeSwiper>
-    <HomeIcons :list="iconList"></HomeIcons>
-    <HomeRecommend :list="recommendList"></HomeRecommend>
-    <HomeWeekend :list="weekendList"></HomeWeekend>
+    <home-herder :city="city"></home-herder>
+    <home-swiper :list="swiperList"></home-swiper>
+    <home-icons :list="iconList"></home-icons>
+    <home-recommend :list="recommendList"></home-recommend>
+    <home-weekend :list="weekendList"></home-weekend>
   </div>
 </template>
 
