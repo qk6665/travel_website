@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../pages/home/Home.vue'
-import List from '../pages/list/List.vue'
+import City from '../pages/city/City.vue'
 
 Vue.use(VueRouter)
 
@@ -12,9 +12,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/list',
-    name: 'list',
-    component: List
+    path: '/city',
+    name: 'city',
+    component: City
   }
 ]
 
