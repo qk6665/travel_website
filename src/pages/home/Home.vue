@@ -34,21 +34,22 @@ export default {
     HomeWeekend
   },
   methods: {
-    getHomeInfo () {
+    _getHomeInfo () {
       getHomeInfo().then((res) => {
         console.log(res)
         if (res.ret && res.data) {
-          this.city = res.data.city
-          this.swiperList = res.data.swiperList
-          this.iconList = res.data.iconList
-          this.recommendList = res.data.recommendList
-          this.weekendList = res.data.weekendList
+          const data = res.data
+          this.city = data.city
+          this.swiperList = data.swiperList
+          this.iconList = data.iconList
+          this.recommendList = data.recommendList
+          this.weekendList = data.weekendList
         }
       })
     }
   },
   mounted () {
-    this.getHomeInfo()
+    this._getHomeInfo()
   }
 }
 </script>
