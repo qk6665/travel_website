@@ -1,15 +1,20 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1602/45/459bd3d00321a44790.water.jpg_600x330_81c878a2.jpg" />
+      <img class="banner-img" :src="bannerImg" />
       <div class="banner-info">
         <div class="banner-title">
-          ddddddddddddddddddddd
+          {{this.sightName}}
         </div>
-        <div class="banner-number banner-icon"><span class="iconfont">&#xe63e;</span> </div>
+        <div class="banner-number banner-icon"><span class="iconfont">&#xe63e;</span>
+          {{this.galleryImgs.length}}
+        </div>
       </div>
     </div>
-    <common-gallery v-show="showGallery" @close="handleGalleryClose"></common-gallery>
+    <common-gallery v-show="showGallery"
+                    @close="handleGalleryClose"
+                    :imgs="galleryImgs"
+    ></common-gallery>
   </div>
 </template>
 
@@ -17,6 +22,11 @@
 import CommonGallery from '../../../common/gallery/Gallary'
 export default {
   name: 'DetailBanner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    galleryImgs: Array
+  },
   data () {
     return {
       showGallery: false
@@ -65,6 +75,6 @@ export default {
         border-radius .2rem
         background rgba(0, 0, 0, .8)
         font-size .24rem
-        .banner-icon
-          font-size .24rem
+        .iconfont
+          font-size .26rem
 </style>

@@ -1,12 +1,10 @@
 <template>
   <div class="container" @click="handleGalleryClick">
     <div class="wrapper">
-      <swiper :options="swiperOption">
-        <swiper-slide>
-          <img class="gallery-img" src="http://img1.qunarzz.com/sight/p0/1602/45/459bd3d00321a44790.water.jpg_r_800x800_523d81a9.jpg" />
-        </swiper-slide>
-        <swiper-slide>
-          <img class="gallery-img" src="http://img1.qunarzz.com/sight/p0/1602/45/459bd3d00321a44790.water.jpg_r_800x800_523d81a9.jpg" />
+      <swiper :options="swiperOptions">
+        <swiper-slide v-for="(item, index) of imgs" :key="index">
+          <img class="gallery-img" :src="item" />
+          {{item}}
         </swiper-slide>
         <div class="swiper-pagination"  slot="pagination"></div>
       </swiper>
@@ -17,9 +15,12 @@
 <script>
 export default {
   name: 'CommonGallery',
+  props: {
+    imgs: Array
+  },
   data () {
     return {
-      swiperOption: {
+      swiperOptions: {
         pagination: '.swiper-pagination',
         paginationType: 'fraction',
         observeParents: true,
