@@ -1,18 +1,38 @@
 <template>
-  <div class="banner">
-    <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1602/45/459bd3d00321a44790.water.jpg_600x330_81c878a2.jpg" />
-    <div class="banner-info">
-      <div class="banner-title">
-        ddddddddddddddddddddd
+  <div>
+    <div class="banner" @click="handleBannerClick">
+      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1602/45/459bd3d00321a44790.water.jpg_600x330_81c878a2.jpg" />
+      <div class="banner-info">
+        <div class="banner-title">
+          ddddddddddddddddddddd
+        </div>
+        <div class="banner-number banner-icon"><span class="iconfont">&#xe63e;</span> </div>
       </div>
-      <div class="banner-number banner-icon"><span class="iconfont">&#xe63e;</span> </div>
     </div>
+    <common-gallery v-show="showGallery" @close="handleGalleryClose"></common-gallery>
   </div>
 </template>
 
 <script>
+import CommonGallery from '../../../common/gallery/Gallary'
 export default {
-  name: 'DetailBanner'
+  name: 'DetailBanner',
+  data () {
+    return {
+      showGallery: false
+    }
+  },
+  components: {
+    CommonGallery
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallery = true
+    },
+    handleGalleryClose () {
+      this.showGallery = false
+    }
+  }
 }
 </script>
 
