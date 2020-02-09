@@ -1,8 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../pages/home/Home.vue'
-import City from '../pages/city/City.vue'
-import Detail from '../pages/detail/Detail.vue'
 
 Vue.use(VueRouter)
 
@@ -10,17 +7,17 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: () => import('../pages/home/Home.vue')
   },
   {
     path: '/city',
     name: 'city',
-    component: City
+    component: () => import('../pages/city/City.vue')
   },
   {
     path: '/detail/:id',
     name: 'detail',
-    component: Detail
+    component: () => import('../pages/detail/Detail.vue')
   }
 ]
 

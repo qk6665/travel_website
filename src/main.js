@@ -12,7 +12,7 @@ import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
 
-axios.defaults.baseURL = (process.env.NODE_ENV !== 'production') ? 'http://localhost:3000' : 'http://localhost:3000'
+axios.defaults.baseURL = (process.env.NODE_ENV !== 'production') ? 'http://192.168.1.109:3000' : 'http://192.168.1.109:3000'
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 
