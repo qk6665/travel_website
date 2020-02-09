@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-const getHomeInfo = async () => {
+const getHomeInfo = async (city) => {
   let result = ''
   try {
-    result = await axios.get('/getHomeResources')
+    result = await axios.get('/getHomeResources?city=' + city)
     if (result.status === 200) {
       return result.data
     }

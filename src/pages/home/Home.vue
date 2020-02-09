@@ -15,10 +15,12 @@ import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 import { getHomeInfo } from '../../api/getPageInfo'
+import { mapState } from 'vuex'
 export default {
   name: 'home',
   data () {
     return {
+      lastCity: '',
       swiperList: [],
       iconList: [],
       recommendList: [],
@@ -34,7 +36,7 @@ export default {
   },
   methods: {
     _getHomeInfo () {
-      getHomeInfo().then((res) => {
+      getHomeInfo(this.city).then((res) => {
         if (res.ret && res.data) {
           const data = res.data
           this.swiperList = data.swiperList
@@ -45,8 +47,18 @@ export default {
       })
     }
   },
+  computed: {
+    ...mapState(['city'])
+  },
   mounted () {
+    this.lastCity = this.city
     this._getHomeInfo()
+  },
+  activated () {
+    if (this.lastCity !== this.city) {
+      this.lastCity = this.city
+      this._getHomeInfo()
+    }
   }
 }
 </script>
