@@ -10,7 +10,7 @@ npm: v6.9.0
 
 # Deployment steps
 
-## Project setup
+### Project setup
 ```
 npm run install
 ```
@@ -30,7 +30,6 @@ npm run build
 # directory structure
 
 ```
-###########目录结构描述
 ├── public
 │   └── index.html              //入口html文件
 ├── src
