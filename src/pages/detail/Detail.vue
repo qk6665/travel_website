@@ -36,7 +36,6 @@ export default {
     _getDetailInfo () {
       getDetailInfo(this.$route.params.id).then((res) => {
         if (res.ret && res.data) {
-          console.log(res)
           const data = res.data
           this.sightName = data.sightName
           this.bannerImg = data.bannerImg

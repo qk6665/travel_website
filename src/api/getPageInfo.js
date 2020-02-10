@@ -7,9 +7,7 @@ const getHomeInfo = async (city) => {
     if (result.status === 200) {
       return result.data
     }
-  } catch (e) {
-    console.log(e)
-  }
+  } catch (e) {}
   return result
 }
 
@@ -20,9 +18,7 @@ const getCityInfo = async () => {
     if (result.status === 200) {
       return result.data
     }
-  } catch (e) {
-    console.log(e)
-  }
+  } catch (e) {}
   return result
 }
 
@@ -33,9 +29,7 @@ const getDetailInfo = async (id) => {
     if (result.status === 200) {
       return result.data
     }
-  } catch (e) {
-    console.log(e)
-  }
+  } catch (e) {}
   return result
 }
 

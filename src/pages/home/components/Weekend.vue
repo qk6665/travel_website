@@ -2,7 +2,11 @@
   <div>
     <div class="recommend-title">周末去哪</div>
     <ul>
-      <li class="item border-bottom" v-for="(item, index) of list" :key="index">
+      <router-link tag="li"
+                   :to="'/detail/' + item.id"
+                   class="item border-bottom"
+                   v-for="(item, index) of list"
+                   :key="index">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" />
         </div>
@@ -10,7 +14,7 @@
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
