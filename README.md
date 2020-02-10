@@ -4,7 +4,7 @@ node: v10.16.0
 
 npm: v6.9.0
 
-[RESTful API server for travel-website: https://github.com/qk6665/RESTful-API-server-for-travel-website]: https://github.com/qk6665/RESTful-API-server-for-travel-website
+RESTful API server for travel-website: https://github.com/qk6665/RESTful-API-server-for-travel-website
 
 
 
