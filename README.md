@@ -1,4 +1,8 @@
-# Environmental dependence
+# 简介
+
+本仓库项目是Vue仿制去哪儿网App，v1.0是根据DELL老师的慕课网课程一步步做下来的，课程网址是https://coding.imooc.com/class/203.html ，有兴趣的同学可以学习。
+
+# 环境依赖
 
 node: v10.16.0
 
@@ -8,7 +12,7 @@ RESTful API server for travel-website: https://github.com/qk6665/RESTful-API-ser
 
 
 
-# Deployment steps
+# 部署步骤
 
 ### Project setup
 ```
@@ -27,7 +31,7 @@ npm run build
 
 
 
-# directory structure
+# 目录结构
 
 ```
 ├── public
